@@ -5,7 +5,8 @@ const person = {
   age: 25
 };
 
-[id, firstName, lastName, age] = [person.id, person.firstName, person.lastName, person.age];
+//[id, firstName, lastName, age] = [person.id, person.firstName, person.lastName, person.age];
+const {id, firstName, lastName, age} =  person;
 
 // const id = person.id;
 // const firstName = person.firstName;
