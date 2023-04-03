@@ -5,4 +5,4 @@ function repeatHello(callback) {
 
 repeatHello(() => console.log("Hello"));
 
-//la callback deve essere un'arrow function perché non è possibile passare un argomento a setTimeout.
+//la callback deve essere un'arrow function perché le arrow function hanno un "this" ed un return implicito se il setTimeout ha un solo parametro
