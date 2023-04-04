@@ -1,26 +1,28 @@
-new Promise((resolve, reject) => {
+function randomNumber() {
+    return new Promise((resolve, reject) => {
     const isLogged = true;
     if (isLogged == true) {
-        resolve(console.log(Math.random()));
+        resolve(Math.random());
     } else {
-        reject(console.log(`Errore`));
+        reject(`isLogged è falso`);
     }
-}) 
+})
+} 
 
-.then(new Promise((resolve, reject) => {
-    let number = Math.random();
+function printObj(num) {
+   return new Promise((resolve, reject) => {
     let person = {
         name: "John", 
         age: 24
     };
-    if (number > 0.5) {
+    if (num > 0.5) {
         resolve(person);
     } else {
-        reject(console.log(`Errore`));
+        reject(`L'input è sbagliato`);
     }
 })
-.then(val => console.log(val))
-.catch(err => console.log(`${err} è sbagliato`))
-)
+}
 
-.catch(err => console.log(`${err} è sbagliato`));
+randomNumber()
+    .then(val => console.log(printObj(val)))
+    .catch(err => console.log(`${err} è sbagliato`))
