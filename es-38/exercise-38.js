@@ -18,11 +18,12 @@ function printObj(num) {
     if (num > 0.5) {
         resolve(person);
     } else {
-        reject(`L'input è sbagliato`);
+        reject(`Error`);
     }
 })
 }
 
 randomNumber()
-    .then(val => console.log(printObj(val)))
+    .then(printObj)
+    .then(val => console.log(val))
     .catch(err => console.log(`${err} è sbagliato`))
