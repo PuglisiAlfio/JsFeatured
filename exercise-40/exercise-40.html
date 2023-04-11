@@ -13,16 +13,13 @@
   const jsonData = await response.json();
   
   jsonData.forEach(element => {
-    creaLi(element);
+    const li = document.createElement("li");
+    li.innerText = element.title;
+    container.append(li);
   });
   //console.log(jsonData);
 }
 
-function creaLi(element) {
-    const li = document.createElement("li");
-    li.append(element.title);
-    container.append(li);
-}
 fetchData();
 
 </script>
