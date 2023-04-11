@@ -6,7 +6,8 @@ const user = {
 
 
 function loadStor() {
-  const userlocal = localStorage.setItem("user", JSON.stringify(user));
+  const userlocal = JSON.stringify(user)
+  localStorage.setItem("user", userlocal);
   console.log(userlocal);
 }
 
