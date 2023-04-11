@@ -6,10 +6,8 @@ const user = {
 
 
 function loadStor() {
-  localStorage.setItem("user", JSON.stringify(user));
-  //riga 11 e 12 non sono sicuro siano necessarie
-  const data = localStorage.getItem("user");
-  console.log("data: ", JSON.parse(data));
+  const userlocal = localStorage.setItem("user", JSON.stringify(user));
+  console.log(userlocal);
 }
 
 loadStor();
